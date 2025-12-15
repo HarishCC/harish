@@ -143,7 +143,7 @@ a:hover {
 }
 
 /* ===============================
-   Cinematic Grain Overlay
+   Cinematic Grain Overlay (Visible)
 ================================ */
 body::before {
   content: "";
@@ -151,20 +151,29 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.035;
+  opacity: 0.08;
   background-image:
     repeating-linear-gradient(
       0deg,
-      rgba(255, 255, 255, 0.03),
-      rgba(255, 255, 255, 0.03) 1px,
+      rgba(255, 255, 255, 0.06),
+      rgba(255, 255, 255, 0.06) 1px,
       transparent 1px,
-      transparent 2px
+      transparent 3px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(255, 255, 255, 0.02),
-      rgba(255, 255, 255, 0.02) 1px,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.04) 1px,
       transparent 1px,
-      transparent 2px
+      transparent 3px
     );
+  animation: grainMove 0.4s steps(2) infinite;
+}
+
+@keyframes grainMove {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+  100% { transform: translate(0, 0); }
 }
