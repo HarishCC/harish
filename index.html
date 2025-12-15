@@ -7,31 +7,37 @@
   <title>Harish | AI Cinematics & 3D Worlds</title>
 
   <!-- Primary SEO -->
-  <meta name="description" content="Harish — Scaling AI-powered cinematics, hyperreal 3D worlds, and intelligent creative systems. AI-first storytelling, speed, and impact." />
+  <meta
+    name="description"
+    content="Harish — Scaling AI-powered cinematics, hyperreal 3D worlds, and intelligent creative systems. AI-first storytelling built for speed and impact."
+  />
   <meta name="author" content="Harish" />
   <meta name="robots" content="index, follow" />
 
   <!-- Canonical -->
   <link rel="canonical" href="https://harishcc.github.io/" />
 
-  <!-- Open Graph (LinkedIn, Facebook, WhatsApp) -->
+  <!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Harish | AI Cinematics & 3D Worlds" />
-  <meta property="og:description" content="Scaling AI-powered cinematics, hyperreal 3D worlds, and creative systems built for speed and intelligence." />
+  <meta
+    property="og:description"
+    content="Scaling AI-powered cinematics, hyperreal 3D worlds, and creative systems built for speed and intelligence."
+  />
   <meta property="og:url" content="https://harishcc.github.io/" />
   <meta property="og:site_name" content="Harish" />
-
-  <!-- 🔴 IMPORTANT: add an image later -->
-  <!-- Recommended size: 1200x630 -->
-  <!-- <meta property="og:image" content="https://harishcc.github.io/og-image.jpg" /> -->
+  <meta property="og:image" content="https://harishcc.github.io/og-image.jpg" />
 
   <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Harish | AI Cinematics & 3D Worlds" />
-  <meta name="twitter:description" content="AI-first cinematic storytelling, 3D worlds, and systems built for scale." />
-  <!-- <meta name="twitter:image" content="https://harishcc.github.io/og-image.jpg" /> -->
+  <meta
+    name="twitter:description"
+    content="AI-first cinematic storytelling, 3D worlds, and systems built for scale."
+  />
+  <meta name="twitter:image" content="https://harishcc.github.io/og-image.jpg" />
 
-  <!-- Theme color (mobile browsers) -->
+  <!-- Theme Color -->
   <meta name="theme-color" content="#000000" />
 
   <!-- Inter Font -->
@@ -108,12 +114,13 @@
     <p>LinkedIn: <a href="#" target="_blank">Add later</a></p>
   </section>
 
-  <!-- Scroll Reveal -->
+  <!-- Scroll Reveal Script -->
   <script>
     const reveals = document.querySelectorAll(".reveal");
+
     const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("active");
           }
@@ -121,7 +128,8 @@
       },
       { threshold: 0.15 }
     );
-    reveals.forEach(section => observer.observe(section));
+
+    reveals.forEach((section) => observer.observe(section));
   </script>
 
 </body>
