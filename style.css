@@ -143,16 +143,15 @@ a:hover {
 }
 
 /* ===============================
-   Cinematic Grain Overlay
+   Cinematic Grain Overlay (Visible)
 ================================ */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  z-index: 2; /* lowered for safety */
+  z-index: 9999;
   opacity: 0.08;
-  will-change: transform;
   background-image:
     repeating-linear-gradient(
       0deg,
