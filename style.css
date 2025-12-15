@@ -1,21 +1,23 @@
-/* ---- Base Reset ---- */
+/* Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ---- Global ---- */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   background: radial-gradient(circle at top, #111 0%, #000 60%);
   color: #eaeaea;
   line-height: 1.7;
-  letter-spacing: 0.2px;
 }
 
-/* ---- Layout ---- */
+/* Layout */
 section {
   max-width: 1100px;
   margin: 0 auto;
@@ -28,27 +30,18 @@ hr {
   background: linear-gradient(to right, transparent, #222, transparent);
 }
 
-/* ---- Hero ---- */
+/* Headings */
 h1 {
   font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 24px;
 }
 
-section:first-of-type p {
-  font-size: 1.2rem;
-  opacity: 0.8;
-}
-
-/* ---- Headings ---- */
 h2 {
   font-size: 2rem;
   margin-bottom: 32px;
-  font-weight: 600;
 }
 
-/* ---- Text ---- */
 p {
   max-width: 720px;
   margin-bottom: 24px;
@@ -64,51 +57,23 @@ li {
   margin-bottom: 14px;
 }
 
-/* ---- Links ---- */
+/* Links */
 a {
   color: #8ab4ff;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
 
-/* ---- Footer / Contact ---- */
-section:last-of-type {
-  padding-bottom: 160px;
-}
-/* ---- Cinematic Motion ---- */
-
-section {
+/* Scroll Reveal */
+.reveal {
   opacity: 0;
   transform: translateY(40px);
-  animation: fadeUp 1.2s ease-out forwards;
+  transition: opacity 0.9s ease-out, transform 0.9s ease-out;
 }
 
-section:nth-of-type(1) {
-  animation-delay: 0.2s;
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
-section:nth-of-type(2) {
-  animation-delay: 0.4s;
-}
-section:nth-of-type(3) {
-  animation-delay: 0.6s;
-}
-section:nth-of-type(4) {
-  animation-delay: 0.8s;
-}
-section:nth-of-type(5) {
-  animation-delay: 1s;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-html {
-  scroll-behavior: smooth;
-}
-
