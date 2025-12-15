@@ -140,7 +140,7 @@ a:hover {
 }
 
 /* ===============================
-   CINEMATIC GRAIN (FORCED VISIBLE)
+   CINEMATIC GRAIN (FINAL TUNED)
 ================================ */
 body::before {
   content: "";
@@ -148,11 +148,32 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 2;
-  opacity: 0.18; /* intentionally strong */
+  opacity: 0.06; /* cinematic sweet spot */
   will-change: transform;
 
   background-image:
     repeating-radial-gradient(
       circle,
-      rgba(255,255,255,0.15) 0px,
-      rgba(255,255,255,0.
+      rgba(255,255,255,0.08) 0px,
+      rgba(255,255,255,0.08) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    repeating-radial-gradient(
+      circle,
+      rgba(0,0,0,0.22) 0px,
+      rgba(0,0,0,0.22) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+
+  animation: grainMove 0.35s steps(2) infinite;
+}
+
+@keyframes grainMove {
+  0%   { transform: translate(0, 0); }
+  25%  { transform: translate(-1px, 1px); }
+  50%  { transform: translate(1px, -1px); }
+  75%  { transform: translate(-1px, -1px); }
+  100% { transform: translate(0, 0); }
+}
